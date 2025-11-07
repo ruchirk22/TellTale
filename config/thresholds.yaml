@@ -1,0 +1,51 @@
+# TellTale Scoring Weights & Risk Thresholds
+
+# --- Scoring Weights ---
+# How much each score contributes to the final probability (must sum to 1.0)
+weights:
+  prosody_abnormality: 0.25
+  pause_abnormality: 0.20
+  disfluency_absence: 0.25
+  ai_content_probability: 0.20
+  rate_consistency: 0.10
+
+# --- Risk Level Thresholds ---
+# The boundaries for the final probability
+risk_levels:
+  HIGH: 0.75          # 75% and above
+  MEDIUM-HIGH: 0.60   # 60% - 74.9%
+  MEDIUM: 0.45        # 45% - 59.9%
+  LOW-MEDIUM: 0.30    # 30% - 44.9%
+  # Anything below LOW-MEDIUM is "LOW"
+
+# --- Feature Thresholds (for score calculation) ---
+# These are the "magic numbers" used in _calculate_detection_scores
+# Tuned based on the Master Prompt's algorithms.
+
+prosody:
+  # Pitch Coefficient of Variation (CV)
+  pitch_cv_suspicious: 0.15   # Below this is 0.8 susp.
+  pitch_cv_somewhat: 0.25     # Below this is 0.4 susp.
+  
+  # Monotonicity
+  monotonicity_suspicious: 0.7  # Above this is 0.9 susp.
+  monotonicity_somewhat: 0.5    # Above this is 0.5 susp.
+
+pause:
+  # Micropause Count
+  micropause_suspicious: 3      # Below this is 0.8 susp.
+  micropause_somewhat: 7      # Below this is 0.4 susp.
+  
+  # Pause Standard Deviation
+  pause_std_suspicious: 0.1     # Below this is 0.7 susp.
+
+disfluency:
+  # Disfluency "Naturalness" Score (from 0-100)
+  # These are the cutoffs for the 'disfluency_absence' score
+  score_suspicious_1: 10      # Below this = 0.9 absence score
+  score_suspicious_2: 20      # Below this = 0.7 absence score
+  score_suspicious_3: 40      # Below this = 0.3 absence score
+
+ai_content:
+  # (This is handled by the ai_content_detector module itself)
+  pass:
