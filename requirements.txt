@@ -1,0 +1,51 @@
+#Core Dependencies
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+pyyaml>=6.0
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+
+#Audio Processing
+librosa>=0.10.0
+soundfile>=0.12.1
+pydub>=0.25.1
+audioread>=3.0.0
+webrtcvad>=2.0.10
+
+#Speech-to-Text (runs locally, no API cost)
+openai-whisper>=20231117
+
+#Prosody & Acoustic Analysis
+opensmile>=2.5.0
+praat-parselmouth>=0.4.3
+
+#Speaker Diarization (optional but recommended)
+pyannote.audio>=3.1.0
+
+#NLP & Text Processing
+spacy>=3.7.0
+nltk>=3.8.0
+textstat>=0.7.3
+
+#Transformers & AI Detection
+transformers>=4.35.0
+sentence-transformers>=2.2.0
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+#Machine Learning
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+lightgbm>=4.1.0
+joblib>=1.3.0
+
+#Visualization (optional)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.17.0
+
+#API/Web (optional for deployment)
+fastapi>=0.104.0
+uvicorn>=0.24.0
