@@ -1,0 +1,32 @@
+# TellTale Main Configuration File
+
+# --- Audio Processing ---
+audio:
+  sample_rate: 16000 # SR for VAD, Whisper, etc.
+  mono: true
+  
+  # Voice Activity Detection (VAD) settings
+  vad_aggressiveness: 3             # 0 (least aggressive) to 3 (most aggressive)
+  vad_frame_ms: 30                # Frame duration for VAD (10, 20, or 30)
+  vad_padding_ms: 300             # Padding around detected speech
+
+# --- Transcription ---
+transcription:
+  whisper_model: "base"           # Default model. Can be overridden by --model
+  language: "en"
+  word_timestamps: true
+
+# --- Prosody ---
+prosody:
+  pitch_floor: 75
+  pitch_ceiling: 500
+
+# --- AI Content Detection ---
+ai_detection:
+  # We use MPS for this heavy model
+  device: "mps" # or "cpu"
+
+# --- Logging ---
+logging:
+  level: "INFO" # DEBUG, INFO, WARNING, ERROR
+  log_file: "results/telltale_analysis.log" # A central log file

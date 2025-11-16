@@ -1,0 +1,128 @@
+# TellTale - cross-platform Git ignore for Python project (Windows + macOS/Linux)
+# ------------------------------------------------------------
+
+# Byte-compiled / optimized / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cython debug symbols
+cython_debug/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Windows virtualenv folder variants
+venv\
+.venv\
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Environment & secrets
+.env
+.env.*
+env.local
+local_settings.py
+secrets.json
+
+# Temporary and output directories
+temp/
+tmp/
+results/
+cache/
+out/
+
+# Model weights and large binary artifacts
+models/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Hugging Face / Transformers caches
+.cache/huggingface/
+.cache/torch/
+transformers_cache/
+huggingface/
+huggingface_hub/
+
+# Whisper / audio model caches
+whisper_cache/
+
+# Audio / multimedia tooling
+# ffmpeg is a system dependency; binaries should not be checked in
+ffmpeg.exe
+
+# native libraries and runtime caches
+libsndfile/
+
+# openSMILE / Praat intermediate files
+opensmile_cache/
+parselmouth_cache/
+*.praat
+
+# IDE/editor swap/temp files
+*~
+*.swp
+*.swo
+
+# Python profiling
+profile_default/
+ipython_config.py
+
+# Build artifacts
+__pypackages__/
+build/
+
+# Ignore node modules if present
+node_modules/
+
+# Coverage / testing
+coverage/
+
+# End
